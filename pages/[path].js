@@ -6,7 +6,7 @@ import FormComponent from '../front/components/FormComponent';
 
 export default function Page({ props}) {
    
-
+console.log(props);
   
 
   useEffect(() => {
