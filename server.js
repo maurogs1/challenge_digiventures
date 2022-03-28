@@ -1,6 +1,13 @@
 const express = require("express");
 const next = require("next");
 const bodyParser = require("body-parser");
+const cors = require("cors");
+
+
+const corsOptions = {
+  origin: ["https://challenge-digiventures.vercel.app"],
+  credentials:true
+};
 
 
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -28,6 +35,7 @@ app.prepare().then(() => {
   const server = express();
   server.use(bodyParser.urlencoded({ extended: false }))
   server.use(bodyParser.json())
+  server.use(cors(corsOptions));
 
 
   server.use("/users", require("./api/routes/user.routes"));
