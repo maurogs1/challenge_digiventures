@@ -39,7 +39,7 @@ console.log(props);
 Page.getInitialProps = async (ctx) => {
   try {
     
-    const res = await fetch('http://localhost:3000/configuration/'+ctx.query.path)
+    const res = await fetch('https://digiventures-challenge.herokuapp.com/configuration/'+ctx.query.path)
     const json = await res.json()
     return { props: json }  
   } catch (error) {
