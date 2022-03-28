@@ -1,10 +1,10 @@
 import { useState, useContext, useEffect } from "react";
 import { Form, FormGroup, Alert, CardImg, Button } from "reactstrap";
 import { WichComponent } from "./WichComponent";
-import { getButtonMethods } from "/front/utils/getButtonMethods";
-import { useForm } from "/front/hooks/useform";
-import { UserContext } from "/front/context/user/userContext";
-import { getSelectOption } from "/front/utils/getInitialState";
+import { getButtonMethods } from "../utils/getButtonMethods";
+import { useForm } from "../hooks/useForm";
+import { UserContext } from "../context/user/UserContext";
+import { getSelectOption } from "../utils/getInitialState";
 
 export default function FormComponent({ props }) {
   const [isCustomSelectOption, setIsCustomSelectOption] = useState(false);

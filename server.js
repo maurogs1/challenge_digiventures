@@ -12,7 +12,7 @@ const handle = app.getRequestHandler();
 const ConfigurationModel = require("./api/models/inputs.json");
 const ConfigurationService = require("./api/services/ConfigurationService");
 const ConfigurationController = require("./api/controllers/ConfigurationController");
-const dbConnection = require("./api/ultil/dbConnection");
+const dbConnection = require("./api/ultil/dbconnection");
 
 //Configuration instances
 const ConfigurationServiceInstance = new ConfigurationService(

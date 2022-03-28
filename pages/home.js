@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react"
-import { UserContext } from "/front/context/user/userContext"
+import { UserContext } from "../front/context/user/UserContext"
 import Router from 'next/router'
 
 export default function Home() {

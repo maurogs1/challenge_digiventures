@@ -7,7 +7,7 @@ export default function Index() {
         <div className="nav__logo">
           <img className="logo" alt="Digiventures logo" src="logo.webp" onClick={ () => window.open('https://www.digiventures.la/','_blank') } />
         </div>
-        <div className="d-flex w-50">
+        <div className="d-flex w-50 nav__links">
           <li>
             <Link href="/login" as="/login">
               <a className="nav__item">Login</a>
@@ -20,7 +20,6 @@ export default function Index() {
           </li>
         </div>
       </ul>
-    )
     </>
   );
 }

@@ -15,7 +15,6 @@ export const getButtonMethods = (
 };
 
 const register = async (user,set_response_error,setRegistroExitoso,selectOptionsList) => {
-  console.log(user)
   
   if (user.password !== user.password_confirmation) {
     return set_response_error("Password does not match");
