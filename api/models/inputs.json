@@ -1,0 +1,171 @@
+{
+  "login": {
+    "title": "Welcome back",
+    "inputs": [
+      {
+        "type": "text",
+        "name": "username",
+        "label": "Username",
+        "regex": "[a-zA-Z]{1,32}",
+        "errorRegex": "Username must be between 1 and 32 characters long and only contain letters",
+        "required": true
+      },
+      {
+        "type": "password",
+        "name": "password",
+        "label": "Password",        
+        "regex": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",
+        "errorRegex": "Password must be at least 8 characters long and contain at least one letter and one number",
+        "required": true
+      },
+      {
+        "type": "checkbox",
+        "name": "remember",
+        "label": "Remember me"
+      },
+      {
+        "type": "button",
+        "label": "Login",
+        "method": "login"
+      },
+      {
+        "type": "link",
+        "to": "https://digiventures.la/",
+        "target": "_newblank",
+        "label": "¿Any problem? Contact us"
+      }
+    ]
+  },
+  "algo": {
+    "title": "Welcome back",
+    "inputs": [
+      {
+        "type": "text",
+        "name": "username",
+        "label": "Username",
+        "regex": "[a-zA-Z]{1,32}",
+        "errorRegex": "Username must be between 1 and 32 characters long and only contain letters",
+        "required": true
+      },
+      {
+        "type": "text",
+        "name": "username",
+        "label": "Username",
+        "regex": "[a-zA-Z]{1,32}",
+        "errorRegex": "Username must be between 1 and 32 characters long and only contain letters",
+        "required": true
+      },
+      {
+        "type": "password",
+        "name": "password",
+        "label": "Password",        
+        "regex": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",
+        "errorRegex": "Password must be at least 8 characters long and contain at least one letter and one number",
+        "required": true
+      },
+      {
+        "type": "checkbox",
+        "name": "remember",
+        "label": "Remember me"
+      },
+      {
+        "type": "button",
+        "label": "Login",
+        "method": "login"
+      },
+      {
+        "type": "link",
+        "to": "https://digiventures.la/",
+        "target": "_newblank",
+        "label": "¿Any problem? Contact us"
+      }
+    ]
+  },
+  "register": {
+    "title": "Welcome",
+    "inputs": [
+      {
+        "type": "text",
+        "name": "fullname",
+        "label": "Your full name",
+        " ": "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$",
+        "errorRegex": "Full name must be only letters"
+      },
+
+      {
+        "type": "email",
+        "name": "email",
+        "label": "Email",
+        "regex": "^[w-.]+@([w-]+.)+[w-]{2,4}$",
+        "errorRegex": "Email must be valid"        
+      },
+      {
+        "type": "text",
+        "name": "username",
+        "label": "Username",
+        "regex": "[a-zA-Z]{1,32}",
+        "errorRegex": "Username must be between 1 and 32 characters long and only contain letters"
+      },
+      {
+        "type": "password",
+        "name": "password",
+        "label": "Password",
+        "regex": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",
+        "errorRegex": "Password must be at least 8 characters long and contain at least one letter and one number"
+      },
+      {
+        "type": "password",
+        "name": "password_confirmation",
+        "label": "Confirm your password",
+        "regex": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",
+        "errorRegex": "Password must be at least 8 characters long and contain at least one letter and one number",
+        "conditions": {
+          "validations": [{ "comparision": "same", "input": "password" }]
+        }
+      },
+      {
+        "type": "select",
+        "name": "country",
+        "label": "¿Where are you living?",
+        "options": [
+          { "value": "argentina", "label": "Argentina" },
+          { "value": "other", "label": "Other" }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "custom_country",
+        "label": "Specify which country",
+        "conditions": {
+          "validations": [
+            {
+              "comparision": "not_includes",
+              "input": "country",
+              "values": ["argentina"]
+            }
+          ],
+          "render": [
+            [
+              {
+                "comparision": "includes",
+                "input": "country",
+                "values": ["other"]
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "type": "button",
+        "label": "Create account",
+        "method": "register"
+      },
+      {
+        "type": "link",
+        "to": "https://digiventures.la/",
+        "target": "_newblank",
+        "label": "¿Any problem? Contact us"
+      }
+    ]
+  }
+}
