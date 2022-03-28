@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getInitialState } from "../utils/getInitialState";
+import { getInitialState } from "/front/utils/getInitialState";
 
 export const useForm = (props, setSelectedOptions = null) => {
     const  initialState = getInitialState(props.inputs);
