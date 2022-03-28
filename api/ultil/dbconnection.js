@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 //rD1hRoFM9b18CZSH
-console.log('asdad')
 const password = 'rD1hRoFM9b18CZSH';
 const dbname = 'digiventures';
 const url = `mongodb+srv://test:${ password }@cluster0.vwgjk.mongodb.net/${dbname}?retryWrites=true&w=majority`
