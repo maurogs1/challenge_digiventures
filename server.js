@@ -5,7 +5,7 @@ const cors = require("cors");
 
 
 const corsOptions = {
-  origin: ["https://challenge-digiventures.vercel.app"],
+  origin: ["https://challenge-digiventures.vercel.app",'http://challenge-digiventures.vercel.app'],
   credentials:true
 };
 
@@ -33,9 +33,10 @@ const ConfigurationControllerInstance = new ConfigurationController(
 
 app.prepare().then(() => {
   const server = express();
+  server.use(cors(corsOptions));
+
   server.use(bodyParser.urlencoded({ extended: false }))
   server.use(bodyParser.json())
-  server.use(cors(corsOptions));
 
 
   server.use("/users", require("./api/routes/user.routes"));
