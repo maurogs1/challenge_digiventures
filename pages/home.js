@@ -1,10 +1,20 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { UserContext } from "../front/context/user/userContext"
-import  Router  from 'next/router'
+import Router from 'next/router'
+import { useRouter } from 'next/router'
+
 export default function Home() {
+
  const {username} = useContext(UserContext) 
-    if(!username)
-        Router.push('/login')
+
+useEffect(() => {
+    
+    if(!username){
+        Router.push('/')
+    }
+
+})
+ 
     return (
         <div> 
             <h1>Bienvenido { username }</h1>

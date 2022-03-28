@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import Router from 'next/router'
 import { useEffect } from 'react';
 import FormComponent from '../front/components/FormComponent';
 
@@ -7,10 +7,14 @@ import FormComponent from '../front/components/FormComponent';
 export default function Page({ props}) {
    
 
-  const router = useRouter()
+  
+
   useEffect(() => {
-  if(props?.error)
-    router.push('/404');
+
+    if(props?.error){      
+      Router.push('/404');
+    }
+  
   }, [props])
   
 
