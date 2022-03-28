@@ -5,7 +5,7 @@ const cors = require("cors");
 
 
 const corsOptions = {
-  origin: ["https://challenge-digiventures.vercel.app",'http://challenge-digiventures.vercel.app'],
+  origin: ["https://challenge-digiventures.vercel.app",'http://challenge-digiventures.vercel.app','https://digiventures-challenge.herokuapp.com'],
   credentials:true
 };
 
