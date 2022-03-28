@@ -11,7 +11,6 @@ class ConfigurationController {
   get(req, res) {    
 
     const configuration =  this.configurationService.getById(req.params.path);
-    console.log(req.params.path)
     if(configuration.data !== null) 
       return res.send(configuration.data );
     else{

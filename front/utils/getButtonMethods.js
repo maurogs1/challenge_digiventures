@@ -58,7 +58,6 @@ const register = async (user,set_response_error,setRegistroExitoso,selectOptions
 };
 
 const login = async (user, set_response_error, setUsername) => {
-  console.log(user)
   axios
     .post("http://localhost:3000/users/login", {
       username: user.username,

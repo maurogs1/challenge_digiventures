@@ -12,7 +12,6 @@ export default function FormComponent({ props }) {
   const [formComponent, handleInputChange, isError] = useForm(props,setIsCustomSelectOption
   );
 
-  console.log(props);
   const [inputs, setInputs] = useState(props.inputs);
   const [dataError, setDataError] = useState("");
   const [registroExitoso, setRegistroExitoso] = useState("");
