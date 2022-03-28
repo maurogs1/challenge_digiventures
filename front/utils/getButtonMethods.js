@@ -67,9 +67,10 @@ const login = async (user, set_response_error, setUsername) => {
     })
     .then(function ({ data }) {
       if (data?.response) {
-        console.log(data.response.username);
         set_response_error("");
         setUsername(data.response.username);
+        Router.push('/home')
+
       }
       if (data?.error) {
         set_response_error(data.error);

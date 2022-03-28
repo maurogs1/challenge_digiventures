@@ -1,6 +1,6 @@
 import Router from 'next/router'
 import { useEffect } from 'react';
-import FormComponent from '../front/components/FormComponent';
+import FormComponent from '/front/components/FormComponent';
 
 
 

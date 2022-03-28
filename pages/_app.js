@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-import "../assets/global.css";
-import { UserContext } from "../front/context/user/userContext";
+import "/assets/global.css";
+import { UserContext } from "/front/context/user/userContext";
 
 function MyApp({ Component, pageProps }) {
   const [username, setUsername] = useState("");
