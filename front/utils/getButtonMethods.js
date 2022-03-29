@@ -30,7 +30,7 @@ const register = async (user,set_response_error,setRegistroExitoso,selectOptions
   }
   
   
-  axios.post(`users/register`, {
+  axios.post(`https://digiventures-challenge.herokuapp.com/users/register`, {
       fullname: user.fullname,
       username: user.username,
       email: user.email,
@@ -59,7 +59,7 @@ const register = async (user,set_response_error,setRegistroExitoso,selectOptions
 
 const login = async (user, set_response_error, setUsername) => {
   axios
-    .post(`/users/login`, {
+    .post(`https://digiventures-challenge.herokuapp.com/users/login`, {
       username: user.username,
       password: user.password,
     })
