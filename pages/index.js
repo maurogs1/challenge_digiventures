@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Presentation } from "../front/components/Presentation";
 
 export default function Index() {
   return (
@@ -20,6 +21,7 @@ export default function Index() {
           </li>
         </div>
       </ul>
+      <Presentation />
     </>
   );
 }

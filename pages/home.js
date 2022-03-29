@@ -13,7 +13,7 @@ useEffect(() => {
 })
  
     return (
-        <div> 
+        <div className="d-flex justify-content-center align-items-center vh-100"> 
             <h1>Bienvenido { username }</h1>
          </div>   
     )

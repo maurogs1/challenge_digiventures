@@ -6,7 +6,6 @@ import FormComponent from '../front/components/FormComponent';
 
 export default function Page({ props}) {
    
-console.log(props);
   
 
   useEffect(() => {
@@ -38,8 +37,7 @@ console.log(props);
 
 Page.getInitialProps = async (ctx) => {
   try {
-    
-    const res = await fetch('https://digiventures-challenge.herokuapp.com/configuration/'+ctx.query.path)
+    const res = await fetch(`${process.env.HOST}/configuration/${ctx.query.path}`);
     const json = await res.json()
     return { props: json }  
   } catch (error) {
